@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages & Pricing | Lil Saplings Expert Care</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind & Alpine JS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        primary: { 50: '#f4f7f4', 100: '#e5eee5', 200: '#cadedc', 300: '#a3c3a4', 400: '#76a178', 500: '#528354', 600: '#3e6740', 700: '#325234', 800: '#2b422d', 900: '#243725' },
+                        secondary: '#FAF9F6', accent: '#FCD34D', dark: '#1e293b'
+                    },
+                    borderRadius: { '4xl': '2rem', '5xl': '2.5rem', '6xl': '3rem' },
+                    boxShadow: { 'soft': '0 20px 40px -15px rgba(0,0,0,0.08)', 'softer': '0 10px 30px -10px rgba(0,0,0,0.05)' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FAF9F6;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        .hero-curve {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: translateY(99%);
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .hero-curve svg {
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-curve svg {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body x-data="{ mobileMenuOpen: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 20)">
+
+    <!-- Navigation -->
+    <nav :class="scrolled ? 'bg-secondary/95 backdrop-blur-md shadow-sm text-dark py-4' : 'bg-transparent text-white py-6'"
+        class="fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold tracking-tight inline-flex items-center gap-2">
+                <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+                <a href="about.html" class="hover:text-accent transition-colors">Meet Janita</a>
+                <a href="services.html" class="hover:text-accent transition-colors">Services</a>
+                <a href="packages.html" class="text-accent underline underline-offset-8 decoration-2">Packages</a>
+                <a href="contact.html"
+                    class="bg-white text-primary-600 px-6 py-2.5 rounded-full font-semibold hover:bg-accent hover:text-dark transition-all duration-300 shadow-softer flex items-center gap-2">
+                    Book a Consultation <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-2xl focus:outline-none">
+                <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark text-dark' : 'fa-bars'"></i>
+            </button>
+        </div>
+        <div x-show="mobileMenuOpen" x-transition.opacity
+            class="absolute top-full left-0 w-full bg-secondary text-dark shadow-md md:hidden flex flex-col items-center py-6 space-y-4 font-medium border-t border-gray-100 z-50">
+            <a href="index.html" @click="mobileMenuOpen = false">Home</a>
+            <a href="about.html" @click="mobileMenuOpen = false">Meet Janita</a>
+            <a href="services.html" @click="mobileMenuOpen = false">Services</a>
+            <a href="packages.html" @click="mobileMenuOpen = false" class="text-primary-600">Packages</a>
+            <a href="contact.html" @click="mobileMenuOpen = false"
+                class="bg-primary-600 text-white px-8 py-3 rounded-full font-bold">Book a Consultation</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-primary-600 pt-32 pb-24 md:pt-48 md:pb-40 px-6 relative">
+        <div class="max-w-7xl mx-auto text-center text-white relative z-20">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Packages & Pricing</h1>
+            <p class="text-lg md:text-xl text-primary-50 max-w-2xl mx-auto font-light leading-relaxed">
+                Simple, transparent pricing for premium expert support. Choose the level of care that fits your
+                lifestyle.
+            </p>
+        </div>
+        <div class="hero-curve text-secondary">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="currentColor" fill-opacity="1"
+                    d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,197.3C672,192,768,160,864,154.7C960,149,1056,171,1152,186.7C1248,203,1344,213,1392,218.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Pricing Grid -->
+    <main class="py-24 px-6 bg-secondary relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-5xl mx-auto">
+
+                <!-- Package 1 -->
+                <div
+                    class="bg-white p-10 rounded-[2.5rem] shadow-softer text-left relative hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold text-primary-700 mb-2 uppercase tracking-wide">1-Hour Deep Dive</h3>
+                    <div class="flex items-baseline gap-1 mb-4">
+                        <span class="text-5xl font-black text-dark">$150</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-8 border-b border-gray-100 pb-8">Solve a specific problem with a
+                        focused coaching session.</p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-primary-500 mt-1"></i>
+                            60-min Virtual Consultation</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-primary-500 mt-1"></i>
+                            Pre-call Intake Review</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-primary-500 mt-1"></i>
+                            Written Action Plan</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="block text-center w-full py-4 rounded-full bg-primary-50 text-primary-600 font-bold hover:bg-primary-100 transition-colors">Book
+                        Now</a>
+                </div>
+
+                <!-- Package 2 (Popular) -->
+                <div
+                    class="bg-primary-600 p-10 rounded-[2.5rem] shadow-xl text-left relative transform md:scale-110 z-10 border-4 border-white text-white">
+                    <div class="absolute top-0 right-10 -translate-y-1/2">
+                        <span
+                            class="bg-accent text-dark text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">Most
+                            Popular</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-100 mb-2 uppercase tracking-wide">Sleep Mastery Plan</h3>
+                    <div class="flex items-baseline gap-1 mb-4">
+                        <span class="text-5xl font-black text-white">$450</span>
+                    </div>
+                    <p class="text-sm text-primary-100 mb-8 border-b border-primary-500 pb-8">Full transformation for
+                        nights and naps over 2 weeks.</p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i> Custom
+                            2-week Roadmap</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i> 24/7
+                            Text/Email Support</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i> Daily
+                            Progress Monitoring</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="block text-center w-full py-4 rounded-full bg-accent text-dark font-bold hover:bg-white transition-colors">Select
+                        Plan</a>
+                </div>
+
+                <!-- Package 3 -->
+                <div
+                    class="bg-white p-10 rounded-[2.5rem] shadow-softer text-left relative hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold text-primary-700 mb-2 uppercase tracking-wide">Hands-On Care</h3>
+                    <div class="flex items-baseline gap-1 mb-4">
+                        <span class="text-5xl font-black text-dark">Custom</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-8 border-b border-gray-100 pb-8">In-home overnight or daytime
+                        specialized support.</p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-primary-500 mt-1"></i>
+                            In-home care blocks</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-primary-500 mt-1"></i>
+                            Postpartum relief shifts</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-primary-500 mt-1"></i> Live
+                            parenting coaching</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="block text-center w-full py-4 rounded-full bg-primary-50 text-primary-600 font-bold hover:bg-primary-100 transition-colors">Get
+                        a Quote</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 pt-20 pb-10 px-6">
+        <div class="max-w-7xl mx-auto border-b border-primary-800 pb-16 mb-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <a href="index.html" class="text-3xl font-bold text-white mb-6 inline-flex items-center gap-2">
+                    <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
+                </a>
+                <p class="text-primary-200 font-light max-w-sm mb-8">Expert consulting and specialized newborn care
+                    providing absolute peace of mind for modern families.</p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-primary-800 text-white flex items-center justify-center hover:bg-accent transition-colors"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-primary-800 text-white flex items-center justify-center hover:bg-accent transition-colors"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Explore</h4>
+                <ul class="space-y-4 text-primary-200">
+                    <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-accent transition-colors">Meet Janita</a></li>
+                    <li><a href="services.html" class="hover:text-accent transition-colors">Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Support</h4>
+                <ul class="space-y-4 text-primary-200">
+                    <li><a href="packages.html" class="hover:text-accent transition-colors">Pricing</a></li>
+                    <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Contact</h4>
+                <ul class="space-y-4 text-primary-200 text-sm">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-accent"></i>
+                        Seattle, WA & Global Remote</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-accent"></i> (555) 123-4567
+                    </li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-accent"></i>
+                        janita@lilsaplings.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex justify-center opacity-80 select-none pointer-events-none mb-4">
+            <h1
+                class="text-[15vw] md:text-[12vw] font-black text-transparent bg-clip-text bg-gradient-to-b from-primary-800 to-primary-900 tracking-tighter leading-none transform scale-y-75">
+                Lil Saplings</h1>
+        </div>
+        <div class="text-center text-primary-400 text-sm font-light">
+            &copy; 2026 Lil Saplings Consulting. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

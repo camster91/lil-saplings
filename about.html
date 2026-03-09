@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Janita | Lil Saplings Expert Care</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind & Alpine JS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        primary: { 50: '#f4f7f4', 100: '#e5eee5', 200: '#cadedc', 300: '#a3c3a4', 400: '#76a178', 500: '#528354', 600: '#3e6740', 700: '#325234', 800: '#2b422d', 900: '#243725' },
+                        secondary: '#FAF9F6', accent: '#FCD34D', dark: '#1e293b'
+                    },
+                    borderRadius: { '4xl': '2rem', '5xl': '2.5rem', '6xl': '3rem' },
+                    boxShadow: { 'soft': '0 20px 40px -15px rgba(0,0,0,0.08)', 'softer': '0 10px 30px -10px rgba(0,0,0,0.05)' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FAF9F6;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        .hero-curve {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: translateY(99%);
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .hero-curve svg {
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-curve svg {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body x-data="{ mobileMenuOpen: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 20)">
+
+    <!-- Navigation -->
+    <nav :class="scrolled ? 'bg-secondary/95 backdrop-blur-md shadow-sm text-dark py-4' : 'bg-transparent text-white py-6'"
+        class="fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold tracking-tight inline-flex items-center gap-2">
+                <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+                <a href="about.html" class="text-accent underline underline-offset-8 decoration-2">Meet Janita</a>
+                <a href="services.html" class="hover:text-accent transition-colors">Services</a>
+                <a href="packages.html" class="hover:text-accent transition-colors">Packages</a>
+                <a href="contact.html"
+                    class="bg-white text-primary-600 px-6 py-2.5 rounded-full font-semibold hover:bg-accent hover:text-dark transition-all duration-300 shadow-softer flex items-center gap-2">
+                    Book a Consultation <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-2xl focus:outline-none">
+                <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark text-dark' : 'fa-bars'"></i>
+            </button>
+        </div>
+        <div x-show="mobileMenuOpen" x-transition.opacity
+            class="absolute top-full left-0 w-full bg-secondary text-dark shadow-md md:hidden flex flex-col items-center py-6 space-y-4 font-medium border-t border-gray-100 z-50">
+            <a href="index.html" @click="mobileMenuOpen = false">Home</a>
+            <a href="about.html" @click="mobileMenuOpen = false" class="text-primary-600">Meet Janita</a>
+            <a href="services.html" @click="mobileMenuOpen = false">Services</a>
+            <a href="packages.html" @click="mobileMenuOpen = false">Packages</a>
+            <a href="contact.html" @click="mobileMenuOpen = false"
+                class="bg-primary-600 text-white px-8 py-3 rounded-full font-bold">Book a Consultation</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-primary-600 pt-32 pb-24 md:pt-48 md:pb-40 px-6 relative">
+        <div class="max-w-7xl mx-auto text-center text-white relative z-20">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">My Story & Philosophy</h1>
+            <p class="text-lg md:text-xl text-primary-50 max-w-2xl mx-auto font-light leading-relaxed">
+                Learn more about the heart behind Lil Saplings and my mission to support modern families with expert,
+                compassionate care.
+            </p>
+        </div>
+        <div class="hero-curve text-secondary">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="currentColor" fill-opacity="1"
+                    d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,197.3C672,192,768,160,864,154.7C960,149,1056,171,1152,186.7C1248,203,1344,213,1392,218.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-24 px-6 bg-secondary relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-16 mb-24">
+                <div class="w-full lg:w-1/2">
+                    <div class="rounded-[3rem] overflow-hidden shadow-soft aspect-[4/5]">
+                        <img src="./images/portrait.png" alt="Janita portrait" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <div
+                        class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-xs font-bold tracking-wider uppercase mb-4">
+                        The Founder</div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-dark mb-6 tracking-tight leading-tight">I'm Janita,
+                        and I'm here to <span class="text-primary-600">help you flourish.</span></h2>
+                    <p class="text-lg text-gray-600 mb-6 font-light leading-relaxed">
+                        Growing up in a household that blended Indian and Western traditions, I always valued the
+                        community and expert guidance that helps a family thrive. My journey into childcare began with a
+                        fascination for early development and a desire to bridge the gap for busy, modern parents who
+                        often feel like they're going it alone.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-10 font-light leading-relaxed">
+                        With over a decade of experience as a certified newborn care specialist, I've seen it all—from
+                        the hardest sleep regressions to the most stressful mealtime battles. My philosophy is simple:
+                        **Empower the parents, nurture the child.** I don't just provide a service; I provide a roadmap
+                        back to peace and confidence.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-3xl shadow-softer border border-gray-100">
+                            <h4 class="font-bold text-primary-600 text-xl mb-1">10+ Years</h4>
+                            <p class="text-gray-500 text-sm">Professional Experience</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-3xl shadow-softer border border-gray-100">
+                            <h4 class="font-bold text-primary-600 text-xl mb-1">100+ Families</h4>
+                            <p class="text-gray-500 text-sm">Successfully Supported</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Credentials Section -->
+            <section class="bg-white rounded-[3rem] p-12 md:p-20 shadow-soft">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Professional Credentials</h2>
+                    <p class="text-gray-600 max-w-xl mx-auto">Safety and expertise are my top priorities. I stay updated
+                        with the latest certifications and standards in childcare.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-certificate"></i></div>
+                        <h4 class="font-bold text-dark mb-2">Newborn Care Specialist</h4>
+                        <p class="text-sm text-gray-500">Advanced NCS Training & Certification</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-heart-pulse"></i></div>
+                        <h4 class="font-bold text-dark mb-2">Pediatric CPR & First Aid</h4>
+                        <p class="text-sm text-gray-500">Annually Renewed Certification</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-brain"></i></div>
+                        <h4 class="font-bold text-dark mb-2">Sleep Science Coach</h4>
+                        <p class="text-sm text-gray-500">Early Childhood Sleep Specialization</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-utensils"></i></div>
+                        <h4 class="font-bold text-dark mb-2">Nutrition Consultant</h4>
+                        <p class="text-sm text-gray-500">Focus on Solid Foundations</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 pt-20 pb-10 px-6">
+        <div class="max-w-7xl mx-auto border-b border-primary-800 pb-16 mb-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <a href="index.html" class="text-3xl font-bold text-white mb-6 inline-flex items-center gap-2">
+                    <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
+                </a>
+                <p class="text-primary-200 font-light max-w-sm mb-8">Expert consulting and specialized newborn care
+                    providing absolute peace of mind for modern families.</p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-primary-800 text-white flex items-center justify-center hover:bg-accent transition-colors"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-primary-800 text-white flex items-center justify-center hover:bg-accent transition-colors"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Explore</h4>
+                <ul class="space-y-4 text-primary-200">
+                    <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-accent transition-colors">Meet Janita</a></li>
+                    <li><a href="services.html" class="hover:text-accent transition-colors">Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Support</h4>
+                <ul class="space-y-4 text-primary-200">
+                    <li><a href="packages.html" class="hover:text-accent transition-colors">Pricing</a></li>
+                    <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Contact</h4>
+                <ul class="space-y-4 text-primary-200 text-sm">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-accent"></i>
+                        Seattle, WA & Global Remote</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-accent"></i> (555) 123-4567
+                    </li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-accent"></i>
+                        janita@lilsaplings.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex justify-center opacity-80 select-none pointer-events-none mb-4">
+            <h1
+                class="text-[15vw] md:text-[12vw] font-black text-transparent bg-clip-text bg-gradient-to-b from-primary-800 to-primary-900 tracking-tighter leading-none transform scale-y-75">
+                Lil Saplings</h1>
+        </div>
+        <div class="text-center text-primary-400 text-sm font-light">
+            &copy; 2026 Lil Saplings Consulting. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>
