@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Janita | Lil Saplings Expert Care</title>
+    <meta name="description"
+        content="Ready to transform your home life? Contact Janita for expert newborn care and consulting. Serving Seattle and families worldwide remote.">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍃</text></svg>">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,8 +82,10 @@
                 <a href="services.html" class="hover:text-accent transition-colors">Services</a>
                 <a href="packages.html" class="hover:text-accent transition-colors">Packages</a>
                 <a href="contact.html"
-                    class="bg-white text-primary-600 px-6 py-2.5 rounded-full font-semibold border-2 border-white shadow-softer flex items-center gap-2">
-                    Book a Consultation <i class="fa-solid fa-arrow-right text-xs"></i>
+                    class="bg-white text-primary-600 px-6 py-2.5 rounded-full font-semibold hover:bg-accent hover:text-dark transition-all duration-300 shadow-softer flex items-center gap-2 group">
+                    Book a Consultation <span
+                        class="bg-primary-100 text-primary-600 rounded-full w-6 h-6 flex items-center justify-center text-xs group-hover:bg-primary-600 group-hover:text-white transition-colors"><i
+                            class="fa-solid fa-arrow-right"></i></span>
                 </a>
             </div>
             <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-2xl focus:outline-none">
@@ -131,7 +137,8 @@
                         <div class="flex items-center gap-6">
                             <div
                                 class="w-14 h-14 rounded-2xl bg-white shadow-softer flex items-center justify-center text-primary-600 text-xl shrink-0">
-                                <i class="fa-solid fa-envelope"></i></div>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
                             <div>
                                 <h4 class="font-bold text-dark text-sm uppercase tracking-wider">Email Me</h4>
                                 <p class="text-gray-600">janita@lilsaplings.com</p>
@@ -140,7 +147,8 @@
                         <div class="flex items-center gap-6">
                             <div
                                 class="w-14 h-14 rounded-2xl bg-white shadow-softer flex items-center justify-center text-primary-600 text-xl shrink-0">
-                                <i class="fa-solid fa-phone"></i></div>
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
                             <div>
                                 <h4 class="font-bold text-dark text-sm uppercase tracking-wider">Call or Text</h4>
                                 <p class="text-gray-600">(555) 123-4567</p>
@@ -149,7 +157,8 @@
                         <div class="flex items-center gap-6">
                             <div
                                 class="w-14 h-14 rounded-2xl bg-white shadow-softer flex items-center justify-center text-primary-600 text-xl shrink-0">
-                                <i class="fa-solid fa-location-dot"></i></div>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
                             <div>
                                 <h4 class="font-bold text-dark text-sm uppercase tracking-wider">Based In</h4>
                                 <p class="text-gray-600">Seattle, WA (Travel Available)</p>
