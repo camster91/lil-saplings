@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Baby Sleep Tips & Parenting Advice in Toronto | Lil Saplings</title>
+    <meta name="description"
+        content="Parenting tips from Toronto childcare specialist Janita. Expert advice on baby sleep training, newborn care, toddler milestones, and more for Toronto families.">
+    <link rel="canonical" href="https://www.lilsaplings.ca/blog">
+    <!-- Geographic SEO -->
+    <meta name="geo.region" content="CA-ON">
+    <meta name="geo.placename" content="Toronto">
+    <meta name="geo.position" content="43.6532;-79.3832">
+    <meta name="ICBM" content="43.6532, -79.3832">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:url" content="https://www.lilsaplings.ca/blog">
+    <meta property="og:title" content="Blog | Baby Sleep Tips & Parenting Advice in Toronto | Lil Saplings">
+    <meta property="og:description" content="Parenting tips from Toronto childcare specialist Janita. Expert advice on baby sleep, newborn care, and toddler milestones.">
+    <meta property="og:site_name" content="Lil Saplings">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Blog | Baby Sleep Tips & Parenting Advice | Lil Saplings">
+    <meta name="twitter:description" content="Expert parenting tips from Toronto childcare specialist Janita.">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind & Alpine JS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        primary: { 50: '#f4f7f4', 100: '#e5eee5', 200: '#cadedc', 300: '#a3c3a4', 400: '#76a178', 500: '#528354', 600: '#3e6740', 700: '#325234', 800: '#2b422d', 900: '#243725' },
+                        secondary: '#FAF9F6', accent: '#FCD34D', dark: '#1e293b'
+                    },
+                    borderRadius: { '4xl': '2rem', '5xl': '2.5rem', '6xl': '3rem' },
+                    boxShadow: { 'soft': '0 20px 40px -15px rgba(0,0,0,0.08)', 'softer': '0 10px 30px -10px rgba(0,0,0,0.05)' }
+                }
+            }
+        }
+    </script>
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Lil Saplings Blog",
+      "description": "Parenting tips and advice from Toronto childcare specialist Janita.",
+      "url": "https://www.lilsaplings.ca/blog",
+      "author": {"@type": "Person", "name": "Janita"},
+      "publisher": {
+        "@type": "Organization",
+        "name": "Lil Saplings",
+        "url": "https://www.lilsaplings.ca/"
+      }
+    }
+    </script>
+    <!-- Google Analytics -->
+    <!-- Replace GA_MEASUREMENT_ID with your actual Google Analytics 4 measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <style>
+        body {
+            background-color: #FAF9F6;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        .hero-curve {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: translateY(99%);
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .hero-curve svg {
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-curve svg {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body x-data="{ mobileMenuOpen: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 20)">
+
+    <!-- Navigation -->
+    <nav :class="scrolled ? 'bg-secondary/95 backdrop-blur-md shadow-sm text-dark py-4' : 'bg-transparent text-white py-6'"
+        class="fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold tracking-tight inline-flex items-center gap-2">
+                <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="/" class="hover:text-accent transition-colors">Home</a>
+                <a href="/about" class="hover:text-accent transition-colors">Meet Janita</a>
+                <a href="/services" class="hover:text-accent transition-colors">Services</a>
+                <a href="/packages" class="hover:text-accent transition-colors">Packages</a>
+                <a href="/contact"
+                    class="bg-white text-primary-600 px-6 py-2.5 rounded-full font-semibold hover:bg-accent hover:text-dark transition-all duration-300 shadow-softer flex items-center gap-2 group">
+                    Book a Consultation <span
+                        class="bg-primary-100 text-primary-600 rounded-full w-6 h-6 flex items-center justify-center text-xs group-hover:bg-primary-600 group-hover:text-white transition-colors"><i
+                            class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </div>
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-2xl focus:outline-none">
+                <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark text-dark' : 'fa-bars'"></i>
+            </button>
+        </div>
+        <div x-show="mobileMenuOpen" x-transition.opacity
+            class="absolute top-full left-0 w-full bg-secondary text-dark shadow-md md:hidden flex flex-col items-center py-6 space-y-4 font-medium border-t border-gray-100 z-50">
+            <a href="/" @click="mobileMenuOpen = false">Home</a>
+            <a href="/about" @click="mobileMenuOpen = false">Meet Janita</a>
+            <a href="/services" @click="mobileMenuOpen = false">Services</a>
+            <a href="/packages" @click="mobileMenuOpen = false">Packages</a>
+            <a href="/contact" @click="mobileMenuOpen = false"
+                class="bg-primary-600 text-white px-8 py-3 rounded-full font-bold">Book a Consultation</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-primary-600 pt-32 pb-24 md:pt-48 md:pb-40 px-6 relative">
+        <div class="max-w-7xl mx-auto text-center text-white relative z-20">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Tips & Insights</h1>
+            <p class="text-lg md:text-xl text-primary-50 max-w-2xl mx-auto font-light leading-relaxed">
+                Practical parenting advice from over 20 years of childcare experience. Real solutions for real families.
+            </p>
+        </div>
+        <div class="hero-curve text-secondary">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="currentColor" fill-opacity="1"
+                    d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,197.3C672,192,768,160,864,154.7C960,149,1056,171,1152,186.7C1248,203,1344,213,1392,218.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Blog Articles -->
+    <main class="py-24 px-6 bg-secondary relative z-10">
+        <div class="max-w-5xl mx-auto">
+
+            <!-- Article 1 -->
+            <article class="bg-white rounded-[2.5rem] p-10 md:p-14 shadow-softer mb-12">
+                <div class="flex flex-wrap items-center gap-4 mb-6">
+                    <span class="px-4 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-bold uppercase tracking-wider">Sleep</span>
+                    <span class="text-sm text-gray-400">March 10, 2026</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6 leading-tight">5 Gentle Sleep Training Tips Every Toronto Parent Should Know</h2>
+                <div class="prose max-w-none text-gray-600 font-light leading-relaxed space-y-4">
+                    <p>Sleep deprivation is one of the biggest challenges new parents face. After working with families across Toronto for over 20 years, I've found that gentle, consistent methods deliver the best long-term results. Here are my top five tips:</p>
+                    <h3 class="text-xl font-bold text-dark mt-8 mb-3">1. Establish a Consistent Bedtime Routine</h3>
+                    <p>Babies thrive on predictability. A simple 20-30 minute wind-down routine (bath, book, lullaby) signals to your baby that sleep is coming. Start this routine at the same time every night, ideally between 6:30-7:30 PM for infants.</p>
+                    <h3 class="text-xl font-bold text-dark mt-8 mb-3">2. Watch for Sleep Cues, Not the Clock</h3>
+                    <p>Yawning, eye-rubbing, and fussiness are your baby's way of saying "I'm ready for sleep." Putting your baby down at the first sign of tiredness prevents overtiredness, which actually makes it harder for them to fall asleep.</p>
+                    <h3 class="text-xl font-bold text-dark mt-8 mb-3">3. Create the Right Sleep Environment</h3>
+                    <p>A cool room (18-20 degrees Celsius), blackout curtains, and white noise create the ideal conditions. Toronto apartments can be noisy, so a good white noise machine is worth the investment.</p>
+                    <h3 class="text-xl font-bold text-dark mt-8 mb-3">4. Give Your Baby a Chance to Self-Soothe</h3>
+                    <p>When your baby stirs at night, wait 2-3 minutes before intervening. Babies cycle through light sleep phases and often resettle on their own. Rushing in can inadvertently create a dependency on external soothing.</p>
+                    <h3 class="text-xl font-bold text-dark mt-8 mb-3">5. Be Patient and Consistent</h3>
+                    <p>Sleep training isn't an overnight fix. Most families I work with in Toronto see meaningful improvement within 5-7 days of consistent effort. Stick with your plan and trust the process.</p>
+                </div>
+                <div class="mt-10 pt-8 border-t border-gray-100 flex items-center gap-4">
+                    <img src="./images/portrait.png" alt="Janita, childcare specialist" class="w-12 h-12 rounded-full object-cover" loading="lazy">
+                    <div>
+                        <p class="font-bold text-dark text-sm">Janita</p>
+                        <p class="text-gray-400 text-xs">Registered ECE & Sleep Consultant</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="bg-white rounded-[2.5rem] p-10 md:p-14 shadow-softer mb-12">
+                <div class="flex flex-wrap items-center gap-4 mb-6">
+                    <span class="px-4 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-bold uppercase tracking-wider">Newborn Care</span>
+                    <span class="text-sm text-gray-400">February 24, 2026</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6 leading-tight">The First 30 Days: A Survival Guide for New Parents</h2>
+                <div class="prose max-w-none text-gray-600 font-light leading-relaxed space-y-4">
+                    <p>Bringing a newborn home is equal parts magical and overwhelming. As someone who has supported dozens of Toronto families through this transition, here's what I wish every new parent knew.</p>
+                    <h3 class="text-xl font-bold text-dark mt-8 mb-3">Accept Help Early</h3>
+                    <p>This is not the time for heroics. When someone offers to bring food, hold the baby so you can shower, or fold laundry, say yes. Building a support system in those first weeks sets the tone for the months ahead.</p>
+                    <h3 class="text-xl font-bold text-dark mt-8 mb-3">Feed on Demand</h3>
+                    <p>In the first 4-6 weeks, forget the schedule. Newborns need to eat every 2-3 hours, and cluster feeding in the evenings is completely normal. Trust your baby's hunger cues.</p>
+                    <h3 class="text-xl font-bold text-dark mt-8 mb-3">Sleep When Baby Sleeps (Really)</h3>
+                    <p>I know it's cliche advice, but it's cliche for a reason. Even a 20-minute nap while baby naps can make the difference between coping and crashing. The dishes can wait.</p>
+                    <h3 class="text-xl font-bold text-dark mt-8 mb-3">Know When to Reach Out</h3>
+                    <p>Postpartum mood changes are common, but persistent sadness, anxiety, or feeling disconnected from your baby are signs to talk to your healthcare provider. There's no shame in asking for professional support.</p>
+                </div>
+                <div class="mt-10 pt-8 border-t border-gray-100 flex items-center gap-4">
+                    <img src="./images/portrait.png" alt="Janita, childcare specialist" class="w-12 h-12 rounded-full object-cover" loading="lazy">
+                    <div>
+                        <p class="font-bold text-dark text-sm">Janita</p>
+                        <p class="text-gray-400 text-xs">Registered ECE & Sleep Consultant</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="bg-white rounded-[2.5rem] p-10 md:p-14 shadow-softer mb-12">
+                <div class="flex flex-wrap items-center gap-4 mb-6">
+                    <span class="px-4 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-bold uppercase tracking-wider">Nutrition</span>
+                    <span class="text-sm text-gray-400">February 10, 2026</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6 leading-tight">Dealing with Picky Eaters: What Actually Works</h2>
+                <div class="prose max-w-none text-gray-600 font-light leading-relaxed space-y-4">
+                    <p>If mealtime has become a battlefield, you're not alone. Picky eating is one of the most common concerns I hear from Toronto parents. Here's the good news: it's developmentally normal, and there are proven strategies to help.</p>
+                    <h3 class="text-xl font-bold text-dark mt-8 mb-3">Remove the Pressure</h3>
+                    <p>The more you push, the more they resist. Your job is to decide what food is offered and when. Your child's job is to decide if they eat and how much. This division of responsibility reduces mealtime stress for everyone.</p>
+                    <h3 class="text-xl font-bold text-dark mt-8 mb-3">Repeated Exposure Is Key</h3>
+                    <p>Research shows it can take 15-20 exposures to a new food before a child accepts it. Keep offering small portions alongside foods they already enjoy, without commentary or pressure.</p>
+                    <h3 class="text-xl font-bold text-dark mt-8 mb-3">Make Food Fun</h3>
+                    <p>Let toddlers help with age-appropriate food prep. Cookie cutters for sandwiches, arranging veggies on a plate, or stirring batter gives them ownership and curiosity about what they're eating.</p>
+                    <h3 class="text-xl font-bold text-dark mt-8 mb-3">Model the Behaviour</h3>
+                    <p>Eat together as a family whenever possible. Children learn by watching. When they see you enjoying a variety of foods, they're more likely to be curious enough to try them.</p>
+                </div>
+                <div class="mt-10 pt-8 border-t border-gray-100 flex items-center gap-4">
+                    <img src="./images/portrait.png" alt="Janita, childcare specialist" class="w-12 h-12 rounded-full object-cover" loading="lazy">
+                    <div>
+                        <p class="font-bold text-dark text-sm">Janita</p>
+                        <p class="text-gray-400 text-xs">Registered ECE & Sleep Consultant</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CTA -->
+            <div class="text-center mt-8">
+                <p class="text-gray-600 font-light mb-6">Have a question about your child's sleep, feeding, or development?</p>
+                <a href="/contact"
+                    class="inline-flex items-center px-10 py-5 rounded-full bg-primary-600 text-white font-bold text-lg hover:bg-primary-700 transition-all shadow-lg">Book
+                    a Free Consultation</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 pt-20 pb-10 px-6">
+        <div class="max-w-7xl mx-auto border-b border-primary-800 pb-16 mb-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <a href="/" class="text-3xl font-bold text-white mb-6 inline-flex items-center gap-2">
+                    <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
+                </a>
+                <p class="text-primary-200 font-light max-w-sm mb-8">Experienced early childhood care and consulting providing peace of mind for modern families.</p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-primary-800 text-white flex items-center justify-center hover:bg-accent transition-colors"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-primary-800 text-white flex items-center justify-center hover:bg-accent transition-colors"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Explore</h4>
+                <ul class="space-y-4 text-primary-200">
+                    <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+                    <li><a href="/about" class="hover:text-accent transition-colors">Meet Janita</a></li>
+                    <li><a href="/services" class="hover:text-accent transition-colors">Services</a></li>
+                    <li><a href="/blog" class="hover:text-accent transition-colors">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Support</h4>
+                <ul class="space-y-4 text-primary-200">
+                    <li><a href="/packages" class="hover:text-accent transition-colors">Pricing</a></li>
+                    <li><a href="/contact" class="hover:text-accent transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Contact</h4>
+                <ul class="space-y-4 text-primary-200 text-sm">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-accent"></i>
+                        Toronto, ON, Ca</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-accent"></i> (647) 402-5890
+                    </li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-accent"></i>
+                        lilsaplingschildcare@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex justify-center opacity-80 select-none pointer-events-none mb-4">
+            <h1
+                class="text-[15vw] md:text-[12vw] font-black text-transparent bg-clip-text bg-gradient-to-b from-primary-800 to-primary-900 tracking-tighter leading-none transform scale-y-75">
+                Lil Saplings</h1>
+        </div>
+        <div class="text-center text-primary-400 text-sm font-light">
+            &copy; 2026 Lil Saplings Consulting. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

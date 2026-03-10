@@ -4,11 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Janita | About Janita | Lil Saplings Experienced Care</title>
+    <title>Contact | Toronto Newborn Care & Sleep Consultant | Lil Saplings</title>
     <meta name="description"
-        content="Ready to transform your home life? Contact Janita for experienced early childhood care and consulting. Serving Toronto, ON and families worldwide remote.">
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>Ã°ÂÂÂ</text></svg>">
+        content="Book a consultation with Janita, Toronto's trusted newborn care and sleep consultant. Call (647) 402-5890 or message online. Serving Toronto, ON families.">
+    <link rel="canonical" href="https://www.lilsaplings.ca/contact">
+    <!-- Geographic SEO -->
+    <meta name="geo.region" content="CA-ON">
+    <meta name="geo.placename" content="Toronto">
+    <meta name="geo.position" content="43.6532;-79.3832">
+    <meta name="ICBM" content="43.6532, -79.3832">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:url" content="https://www.lilsaplings.ca/contact">
+    <meta property="og:title" content="Contact | Toronto Newborn Care & Sleep Consultant | Lil Saplings">
+    <meta property="og:description" content="Book a consultation with Janita, Toronto's trusted newborn care and sleep consultant. Call (647) 402-5890. Serving Toronto, ON families.">
+    <meta property="og:site_name" content="Lil Saplings">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact | Toronto Newborn Care & Sleep Consultant | Lil Saplings">
+    <meta name="twitter:description" content="Book a consultation with Janita, Toronto's trusted newborn care and sleep consultant.">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <!-- Google Analytics -->
+    <!-- Replace GA_MEASUREMENT_ID with your actual Google Analytics 4 measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +58,35 @@
                 }
             }
         }
+    </script>
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://www.lilsaplings.ca/",
+      "name": "Lil Saplings",
+      "description": "Book Toronto's trusted newborn care and sleep consultant. In-home and virtual services for families in Toronto, ON.",
+      "url": "https://www.lilsaplings.ca/",
+      "telephone": "+16474025890",
+      "email": "lilsaplingschildcare@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.6532,
+        "longitude": -79.3832
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Toronto"},
+        {"@type": "State", "name": "Ontario"}
+      ],
+      "openingHours": "Mo-Fr 09:00-18:00"
+    }
     </script>
     <style>
         body {
@@ -73,15 +127,15 @@
     <nav :class="scrolled ? 'bg-secondary/95 backdrop-blur-md shadow-sm text-dark py-4' : 'bg-transparent text-white py-6'"
         class="fixed w-full z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <a href="index.html" class="text-2xl font-bold tracking-tight inline-flex items-center gap-2">
+            <a href="/" class="text-2xl font-bold tracking-tight inline-flex items-center gap-2">
                 <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
             </a>
             <div class="hidden md:flex items-center space-x-8 font-medium">
-                <a href="index.html" class="hover:text-accent transition-colors">Home</a>
-                <a href="about.html" class="hover:text-accent transition-colors">Meet Janita</a>
-                <a href="services.html" class="hover:text-accent transition-colors">Services</a>
-                <a href="packages.html" class="hover:text-accent transition-colors">Packages</a>
-                <a href="contact.html"
+                <a href="/" class="hover:text-accent transition-colors">Home</a>
+                <a href="/about" class="hover:text-accent transition-colors">Meet Janita</a>
+                <a href="/services" class="hover:text-accent transition-colors">Services</a>
+                <a href="/packages" class="hover:text-accent transition-colors">Packages</a>
+                <a href="/contact"
                     class="bg-white text-primary-600 px-6 py-2.5 rounded-full font-semibold hover:bg-accent hover:text-dark transition-all duration-300 shadow-softer flex items-center gap-2 group">
                     Book a Consultation <span
                         class="bg-primary-100 text-primary-600 rounded-full w-6 h-6 flex items-center justify-center text-xs group-hover:bg-primary-600 group-hover:text-white transition-colors"><i
@@ -94,11 +148,11 @@
         </div>
         <div x-show="mobileMenuOpen" x-transition.opacity
             class="absolute top-full left-0 w-full bg-secondary text-dark shadow-md md:hidden flex flex-col items-center py-6 space-y-4 font-medium border-t border-gray-100 z-50">
-            <a href="index.html" @click="mobileMenuOpen = false">Home</a>
-            <a href="about.html" @click="mobileMenuOpen = false">Meet Janita</a>
-            <a href="services.html" @click="mobileMenuOpen = false">Services</a>
-            <a href="packages.html" @click="mobileMenuOpen = false">Packages</a>
-            <a href="contact.html" @click="mobileMenuOpen = false" class="text-primary-600">Contact</a>
+            <a href="/" @click="mobileMenuOpen = false">Home</a>
+            <a href="/about" @click="mobileMenuOpen = false">Meet Janita</a>
+            <a href="/services" @click="mobileMenuOpen = false">Services</a>
+            <a href="/packages" @click="mobileMenuOpen = false">Packages</a>
+            <a href="/contact" @click="mobileMenuOpen = false" class="text-primary-600">Contact</a>
         </div>
     </nav>
 
@@ -168,29 +222,60 @@
 
                     <div class="bg-primary-50 p-8 rounded-3xl border border-primary-100">
                         <h4 class="font-bold text-primary-800 mb-2">Office Hours</h4>
-                        <p class="text-primary-700 text-sm font-light">Mon-Fri: 9am - 6pm PST<br>Response within 24
+                        <p class="text-primary-700 text-sm font-light">Mon-Fri: 9am - 6pm EST<br>Response within 24
                             hours.</p>
                     </div>
                 </div>
 
                 <!-- Form Card -->
-                <div class="w-full lg:w-2/3 bg-white rounded-[3rem] p-8 md:p-16 shadow-soft">
-                    <form action="#" class="space-y-8">
+                <div class="w-full lg:w-2/3 bg-white rounded-[3rem] p-8 md:p-16 shadow-soft"
+                    x-data="{ name: '', email: '', service: 'Sleep Training & Consulting', message: '', sending: false, sent: false, error: '' }">
+
+                    <!-- Success State -->
+                    <div x-show="sent" x-transition class="text-center py-12">
+                        <div class="w-20 h-20 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-4xl mx-auto mb-6">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-3">Message Sent!</h3>
+                        <p class="text-gray-600 font-light">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                        <button @click="sent = false; name = ''; email = ''; message = ''; error = ''"
+                            class="mt-8 text-primary-600 font-bold hover:text-primary-800 transition-colors">Send another message</button>
+                    </div>
+
+                    <!-- Form -->
+                    <form x-show="!sent" @submit.prevent="
+                        error = '';
+                        if (!name.trim() || !email.trim() || !message.trim()) { error = 'Please fill in all required fields.'; return; }
+                        sending = true;
+                        fetch('/api/contact', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ name, email, service, message })
+                        })
+                        .then(r => r.json().then(data => ({ ok: r.ok, data })))
+                        .then(({ ok, data }) => {
+                            sending = false;
+                            if (ok) { sent = true; }
+                            else { error = data.error || 'Something went wrong. Please try again.'; }
+                        })
+                        .catch(() => { sending = false; error = 'Network error. Please try again or email me directly.'; });
+                    " class="space-y-8">
+                        <div x-show="error" x-transition class="bg-red-50 text-red-700 px-6 py-4 rounded-2xl text-sm font-medium" x-text="error"></div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div class="space-y-2">
-                                <label class="text-sm font-bold text-dark ml-2">Your Name</label>
-                                <input type="text" placeholder="John Doe"
+                                <label class="text-sm font-bold text-dark ml-2">Your Name <span class="text-red-400">*</span></label>
+                                <input type="text" x-model="name" placeholder="John Doe" required
                                     class="w-full px-6 py-4 rounded-2xl bg-secondary border-none focus:ring-2 focus:ring-primary-400 focus:bg-white transition-all outline-none">
                             </div>
                             <div class="space-y-2">
-                                <label class="text-sm font-bold text-dark ml-2">Email Address</label>
-                                <input type="email" placeholder="john@example.com"
+                                <label class="text-sm font-bold text-dark ml-2">Email Address <span class="text-red-400">*</span></label>
+                                <input type="email" x-model="email" placeholder="john@example.com" required
                                     class="w-full px-6 py-4 rounded-2xl bg-secondary border-none focus:ring-2 focus:ring-primary-400 focus:bg-white transition-all outline-none">
                             </div>
                         </div>
                         <div class="space-y-2">
                             <label class="text-sm font-bold text-dark ml-2">Service Interested In</label>
-                            <select
+                            <select x-model="service"
                                 class="w-full px-6 py-4 rounded-2xl bg-secondary border-none focus:ring-2 focus:ring-primary-400 focus:bg-white transition-all outline-none appearance-none">
                                 <option>Sleep Training & Consulting</option>
                                 <option>Eating & Milestone Navigation</option>
@@ -199,13 +284,18 @@
                             </select>
                         </div>
                         <div class="space-y-2">
-                            <label class="text-sm font-bold text-dark ml-2">Message</label>
-                            <textarea rows="5" placeholder="Tell me about your child's age and current challenges..."
+                            <label class="text-sm font-bold text-dark ml-2">Message <span class="text-red-400">*</span></label>
+                            <textarea rows="5" x-model="message" placeholder="Tell me about your child's age and current challenges..." required
                                 class="w-full px-6 py-4 rounded-2xl bg-secondary border-none focus:ring-2 focus:ring-primary-400 focus:bg-white transition-all outline-none resize-none"></textarea>
                         </div>
-                        <button type="submit"
-                            class="w-full py-5 rounded-2xl bg-primary-600 text-white font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-primary-600/20">Send
-                            Message</button>
+                        <button type="submit" :disabled="sending"
+                            :class="sending ? 'opacity-60 cursor-not-allowed' : 'hover:bg-primary-700 hover:shadow-primary-600/20'"
+                            class="w-full py-5 rounded-2xl bg-primary-600 text-white font-bold text-lg transition-all shadow-lg">
+                            <span x-show="!sending">Send Message</span>
+                            <span x-show="sending" class="flex items-center justify-center gap-3">
+                                <i class="fa-solid fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
                     </form>
                 </div>
 
@@ -217,7 +307,7 @@
     <footer class="bg-primary-900 pt-20 pb-10 px-6">
         <div class="max-w-7xl mx-auto border-b border-primary-800 pb-16 mb-8 grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
-                <a href="index.html" class="text-3xl font-bold text-white mb-6 inline-flex items-center gap-2">
+                <a href="/" class="text-3xl font-bold text-white mb-6 inline-flex items-center gap-2">
                     <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
                 </a>
                 <p class="text-primary-200 font-light max-w-sm mb-8">Experienced early childhood care and consulting providing peace of mind for modern families.</p>
@@ -233,16 +323,17 @@
             <div>
                 <h4 class="text-white font-bold mb-6">Explore</h4>
                 <ul class="space-y-4 text-primary-200">
-                    <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
-                    <li><a href="about.html" class="hover:text-accent transition-colors">Meet Janita</a></li>
-                    <li><a href="services.html" class="hover:text-accent transition-colors">Services</a></li>
+                    <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+                    <li><a href="/about" class="hover:text-accent transition-colors">Meet Janita</a></li>
+                    <li><a href="/services" class="hover:text-accent transition-colors">Services</a></li>
+                    <li><a href="/blog" class="hover:text-accent transition-colors">Blog</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6">Support</h4>
                 <ul class="space-y-4 text-primary-200">
-                    <li><a href="packages.html" class="hover:text-accent transition-colors">Pricing</a></li>
-                    <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
+                    <li><a href="/packages" class="hover:text-accent transition-colors">Pricing</a></li>
+                    <li><a href="/contact" class="hover:text-accent transition-colors">Contact</a></li>
                 </ul>
             </div>
             <div>
