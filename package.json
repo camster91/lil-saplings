@@ -21,6 +21,7 @@
   "homepage": "https://github.com/camster91/lil-saplings#readme",
   "dependencies": {
     "compression": "^1.8.0",
+    "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "helmet": "^8.1.0"
   }
