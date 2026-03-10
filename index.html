@@ -136,15 +136,15 @@
     <nav :class="scrolled ? 'bg-secondary/95 backdrop-blur-md shadow-sm text-dark py-4' : 'bg-transparent text-white py-6'"
         class="fixed w-full z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <a href="index.html" class="text-2xl font-bold tracking-tight inline-flex items-center gap-2">
+            <a href="/" class="text-2xl font-bold tracking-tight inline-flex items-center gap-2">
                 <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
             </a>
             <div class="hidden md:flex items-center space-x-8 font-medium">
-                <a href="index.html" class="text-accent underline underline-offset-8 decoration-2">Home</a>
-                <a href="about.html" class="hover:text-accent transition-colors">Meet Janita</a>
-                <a href="services.html" class="hover:text-accent transition-colors">Services</a>
-                <a href="packages.html" class="hover:text-accent transition-colors">Packages</a>
-                <a href="contact.html"
+                <a href="/" class="text-accent underline underline-offset-8 decoration-2">Home</a>
+                <a href="/about" class="hover:text-accent transition-colors">Meet Janita</a>
+                <a href="/services" class="hover:text-accent transition-colors">Services</a>
+                <a href="/packages" class="hover:text-accent transition-colors">Packages</a>
+                <a href="/contact"
                     class="bg-white text-primary-600 px-6 py-2.5 rounded-full font-semibold hover:bg-accent hover:text-dark transition-all duration-300 shadow-softer flex items-center gap-2 group">
                     Book a Consultation <span
                         class="bg-primary-100 text-primary-600 rounded-full w-6 h-6 flex items-center justify-center text-xs group-hover:bg-primary-600 group-hover:text-white transition-colors"><i
@@ -157,11 +157,11 @@
         </div>
         <div x-show="mobileMenuOpen" x-transition.opacity
             class="absolute top-full left-0 w-full bg-secondary text-dark shadow-md md:hidden flex flex-col items-center py-6 space-y-4 font-medium border-t border-gray-100 z-50">
-            <a href="index.html" @click="mobileMenuOpen = false" class="text-primary-600">Home</a>
-            <a href="about.html" @click="mobileMenuOpen = false">Meet Janita</a>
-            <a href="services.html" @click="mobileMenuOpen = false">Services</a>
-            <a href="packages.html" @click="mobileMenuOpen = false">Packages</a>
-            <a href="contact.html" @click="mobileMenuOpen = false"
+            <a href="/" @click="mobileMenuOpen = false" class="text-primary-600">Home</a>
+            <a href="/about" @click="mobileMenuOpen = false">Meet Janita</a>
+            <a href="/services" @click="mobileMenuOpen = false">Services</a>
+            <a href="/packages" @click="mobileMenuOpen = false">Packages</a>
+            <a href="/contact" @click="mobileMenuOpen = false"
                 class="bg-primary-600 text-white px-8 py-3 rounded-full font-bold">Book a Consultation</a>
         </div>
     </nav>
@@ -177,7 +177,7 @@
                 <p class="text-lg md:text-xl text-primary-50 mb-10 max-w-lg mx-auto lg:mx-0 font-light">I provide
                     personalized, specialized support navigating childhood's early stagesâfrom sleep coaching and establishing daily routines, to dedicated assistance for busy parents.</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
-                    <a href="contact.html"
+                    <a href="/contact"
                         class="px-8 py-4 rounded-full bg-white text-primary-600 font-bold text-lg hover:bg-accent hover:text-dark transition-all shadow-lg flex items-center justify-center gap-3 w-full sm:w-auto">
                         Get Started <div
                             class="bg-primary-100 text-primary-600 w-8 h-8 rounded-full flex items-center justify-center text-sm">
@@ -255,7 +255,7 @@
                 </div>
             </div>
             <div class="mt-16 text-center">
-                <a href="about.html"
+                <a href="/about"
                     class="font-bold text-primary-600 hover:text-primary-800 flex items-center justify-center gap-2 group">Learn
                     more about my philosophy <i
                         class="fa-solid fa-arrow-right text-xs bg-primary-50 rounded-full w-8 h-8 flex items-center justify-center group-hover:bg-primary-100"></i></a>
@@ -278,7 +278,7 @@
                     Meet Janita</div>
                 <h2 class="text-4xl md:text-5xl font-bold text-dark mb-6 leading-tight tracking-tight">Experienced care from a <span class="text-primary-600">place of heart.</span></h2>
                 <p class="text-lg text-gray-600 mb-10 font-light">Hi, I'm Janita. I founded Lil Saplings to provide direct, one-on-one experienced, realistic, and compassionate support for modern parents without the corporate runaround. My approach is grounded in real-world childcare, delivered with deep empathy.</p>
-                <a href="about.html"
+                <a href="/about"
                     class="inline-flex items-center px-8 py-4 rounded-full bg-primary-600 text-white font-bold text-lg hover:bg-primary-700 transition-all shadow-lg">Read
                     my full story</a>
             </div>
@@ -303,7 +303,7 @@
                     <h3 class="text-2xl font-bold text-dark mb-4">Sleep Mastery</h3>
                     <p class="text-gray-600 font-light mb-8">conquer the nights once and for all with gentle,
                         evidence-based methods tailored to your child.</p>
-                    <a href="services.html"
+                    <a href="/services"
                         class="text-primary-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">Details <i
                             class="fa-solid fa-arrow-right text-xs"></i></a>
                 </div>
@@ -315,7 +315,7 @@
                     <h3 class="text-2xl font-bold text-dark mb-4">Eating & Milestones</h3>
                     <p class="text-gray-600 font-light mb-8">Navigate first foods and picky toddlers with structured
                         activity and nutrition plans.</p>
-                    <a href="services.html"
+                    <a href="/services"
                         class="text-primary-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">Details <i
                             class="fa-solid fa-arrow-right text-xs"></i></a>
                 </div>
@@ -327,13 +327,13 @@
                     <h3 class="text-2xl font-bold text-dark mb-4">Hands-On Coaching</h3>
                     <p class="text-gray-600 font-light mb-8">Direct in-home care blocks or overnight support to get your
                         routine back on track.</p>
-                    <a href="services.html"
+                    <a href="/services"
                         class="text-primary-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">Details <i
                             class="fa-solid fa-arrow-right text-xs"></i></a>
                 </div>
             </div>
             <div class="text-center">
-                <a href="packages.html"
+                <a href="/packages"
                     class="inline-flex items-center px-10 py-5 rounded-full bg-accent text-dark font-black text-xl hover:scale-105 transition-all shadow-lg">View
                     Packages & Pricing</a>
             </div>
@@ -344,7 +344,7 @@
     <footer class="bg-primary-900 pt-20 pb-10 px-6">
         <div class="max-w-7xl mx-auto border-b border-primary-800 pb-16 mb-8 grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
-                <a href="index.html" class="text-3xl font-bold text-white mb-6 inline-flex items-center gap-2">
+                <a href="/" class="text-3xl font-bold text-white mb-6 inline-flex items-center gap-2">
                     <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
                 </a>
                 <p class="text-primary-200 font-light max-w-sm mb-8">Experienced early childhood care and consulting providing peace of mind for modern families.</p>
@@ -360,16 +360,16 @@
             <div>
                 <h4 class="text-white font-bold mb-6">Explore</h4>
                 <ul class="space-y-4 text-primary-200">
-                    <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
-                    <li><a href="about.html" class="hover:text-accent transition-colors">Meet Janita</a></li>
-                    <li><a href="services.html" class="hover:text-accent transition-colors">Services</a></li>
+                    <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+                    <li><a href="/about" class="hover:text-accent transition-colors">Meet Janita</a></li>
+                    <li><a href="/services" class="hover:text-accent transition-colors">Services</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6">Support</h4>
                 <ul class="space-y-4 text-primary-200">
-                    <li><a href="packages.html" class="hover:text-accent transition-colors">Pricing</a></li>
-                    <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
+                    <li><a href="/packages" class="hover:text-accent transition-colors">Pricing</a></li>
+                    <li><a href="/contact" class="hover:text-accent transition-colors">Contact</a></li>
                 </ul>
             </div>
             <div>

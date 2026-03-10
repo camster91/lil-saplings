@@ -7,7 +7,7 @@
     <title>About Janita | Toronto Childcare Specialist | Lil Saplings</title>
     <meta name="description"
         content="Meet Janita, Toronto's Registered ECE and early childhood care specialist with 20+ years of experience. Heart-led support for families across Toronto, ON.">
-    <link rel="canonical" href="https://www.lilsaplings.ca/about.html">
+    <link rel="canonical" href="https://www.lilsaplings.ca/about">
     <!-- Geographic SEO -->
     <meta name="geo.region" content="CA-ON">
     <meta name="geo.placename" content="Toronto">
@@ -16,7 +16,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_CA">
-    <meta property="og:url" content="https://www.lilsaplings.ca/about.html">
+    <meta property="og:url" content="https://www.lilsaplings.ca/about">
     <meta property="og:title" content="About Janita | Toronto Childcare Specialist | Lil Saplings">
     <meta property="og:description" content="Meet Janita, Toronto's Registered ECE and early childhood care specialist with 20+ years of experience. Heart-led support for families across Toronto, ON.">
     <meta property="og:site_name" content="Lil Saplings">
@@ -114,15 +114,15 @@
     <nav :class="scrolled ? 'bg-secondary/95 backdrop-blur-md shadow-sm text-dark py-4' : 'bg-transparent text-white py-6'"
         class="fixed w-full z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <a href="index.html" class="text-2xl font-bold tracking-tight inline-flex items-center gap-2">
+            <a href="/" class="text-2xl font-bold tracking-tight inline-flex items-center gap-2">
                 <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
             </a>
             <div class="hidden md:flex items-center space-x-8 font-medium">
-                <a href="index.html" class="hover:text-accent transition-colors">Home</a>
-                <a href="about.html" class="text-accent underline underline-offset-8 decoration-2">Meet Janita</a>
-                <a href="services.html" class="hover:text-accent transition-colors">Services</a>
-                <a href="packages.html" class="hover:text-accent transition-colors">Packages</a>
-                <a href="contact.html"
+                <a href="/" class="hover:text-accent transition-colors">Home</a>
+                <a href="/about" class="text-accent underline underline-offset-8 decoration-2">Meet Janita</a>
+                <a href="/services" class="hover:text-accent transition-colors">Services</a>
+                <a href="/packages" class="hover:text-accent transition-colors">Packages</a>
+                <a href="/contact"
                     class="bg-white text-primary-600 px-6 py-2.5 rounded-full font-semibold hover:bg-accent hover:text-dark transition-all duration-300 shadow-softer flex items-center gap-2 group">
                     Book a Consultation <span
                         class="bg-primary-100 text-primary-600 rounded-full w-6 h-6 flex items-center justify-center text-xs group-hover:bg-primary-600 group-hover:text-white transition-colors"><i
@@ -135,11 +135,11 @@
         </div>
         <div x-show="mobileMenuOpen" x-transition.opacity
             class="absolute top-full left-0 w-full bg-secondary text-dark shadow-md md:hidden flex flex-col items-center py-6 space-y-4 font-medium border-t border-gray-100 z-50">
-            <a href="index.html" @click="mobileMenuOpen = false">Home</a>
-            <a href="about.html" @click="mobileMenuOpen = false" class="text-primary-600">Meet Janita</a>
-            <a href="services.html" @click="mobileMenuOpen = false">Services</a>
-            <a href="packages.html" @click="mobileMenuOpen = false">Packages</a>
-            <a href="contact.html" @click="mobileMenuOpen = false"
+            <a href="/" @click="mobileMenuOpen = false">Home</a>
+            <a href="/about" @click="mobileMenuOpen = false" class="text-primary-600">Meet Janita</a>
+            <a href="/services" @click="mobileMenuOpen = false">Services</a>
+            <a href="/packages" @click="mobileMenuOpen = false">Packages</a>
+            <a href="/contact" @click="mobileMenuOpen = false"
                 class="bg-primary-600 text-white px-8 py-3 rounded-full font-bold">Book a Consultation</a>
         </div>
     </nav>
@@ -228,7 +228,7 @@
     <footer class="bg-primary-900 pt-20 pb-10 px-6">
         <div class="max-w-7xl mx-auto border-b border-primary-800 pb-16 mb-8 grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
-                <a href="index.html" class="text-3xl font-bold text-white mb-6 inline-flex items-center gap-2">
+                <a href="/" class="text-3xl font-bold text-white mb-6 inline-flex items-center gap-2">
                     <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
                 </a>
                 <p class="text-primary-200 font-light max-w-sm mb-8">Experienced early childhood care and consulting providing peace of mind for modern families.</p>
@@ -244,16 +244,16 @@
             <div>
                 <h4 class="text-white font-bold mb-6">Explore</h4>
                 <ul class="space-y-4 text-primary-200">
-                    <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
-                    <li><a href="about.html" class="hover:text-accent transition-colors">Meet Janita</a></li>
-                    <li><a href="services.html" class="hover:text-accent transition-colors">Services</a></li>
+                    <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+                    <li><a href="/about" class="hover:text-accent transition-colors">Meet Janita</a></li>
+                    <li><a href="/services" class="hover:text-accent transition-colors">Services</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6">Support</h4>
                 <ul class="space-y-4 text-primary-200">
-                    <li><a href="packages.html" class="hover:text-accent transition-colors">Pricing</a></li>
-                    <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
+                    <li><a href="/packages" class="hover:text-accent transition-colors">Pricing</a></li>
+                    <li><a href="/contact" class="hover:text-accent transition-colors">Contact</a></li>
                 </ul>
             </div>
             <div>
