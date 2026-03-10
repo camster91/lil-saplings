@@ -24,8 +24,16 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Contact | Toronto Newborn Care & Sleep Consultant | Lil Saplings">
     <meta name="twitter:description" content="Book a consultation with Janita, Toronto's trusted newborn care and sleep consultant.">
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>Ã°ÂÂÂ</text></svg>">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <!-- Google Analytics -->
+    <!-- Replace GA_MEASUREMENT_ID with your actual Google Analytics 4 measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -220,23 +228,54 @@
                 </div>
 
                 <!-- Form Card -->
-                <div class="w-full lg:w-2/3 bg-white rounded-[3rem] p-8 md:p-16 shadow-soft">
-                    <form action="#" class="space-y-8">
+                <div class="w-full lg:w-2/3 bg-white rounded-[3rem] p-8 md:p-16 shadow-soft"
+                    x-data="{ name: '', email: '', service: 'Sleep Training & Consulting', message: '', sending: false, sent: false, error: '' }">
+
+                    <!-- Success State -->
+                    <div x-show="sent" x-transition class="text-center py-12">
+                        <div class="w-20 h-20 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center text-4xl mx-auto mb-6">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-3">Message Sent!</h3>
+                        <p class="text-gray-600 font-light">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                        <button @click="sent = false; name = ''; email = ''; message = ''; error = ''"
+                            class="mt-8 text-primary-600 font-bold hover:text-primary-800 transition-colors">Send another message</button>
+                    </div>
+
+                    <!-- Form -->
+                    <form x-show="!sent" @submit.prevent="
+                        error = '';
+                        if (!name.trim() || !email.trim() || !message.trim()) { error = 'Please fill in all required fields.'; return; }
+                        sending = true;
+                        fetch('/api/contact', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ name, email, service, message })
+                        })
+                        .then(r => r.json().then(data => ({ ok: r.ok, data })))
+                        .then(({ ok, data }) => {
+                            sending = false;
+                            if (ok) { sent = true; }
+                            else { error = data.error || 'Something went wrong. Please try again.'; }
+                        })
+                        .catch(() => { sending = false; error = 'Network error. Please try again or email me directly.'; });
+                    " class="space-y-8">
+                        <div x-show="error" x-transition class="bg-red-50 text-red-700 px-6 py-4 rounded-2xl text-sm font-medium" x-text="error"></div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div class="space-y-2">
-                                <label class="text-sm font-bold text-dark ml-2">Your Name</label>
-                                <input type="text" placeholder="John Doe"
+                                <label class="text-sm font-bold text-dark ml-2">Your Name <span class="text-red-400">*</span></label>
+                                <input type="text" x-model="name" placeholder="John Doe" required
                                     class="w-full px-6 py-4 rounded-2xl bg-secondary border-none focus:ring-2 focus:ring-primary-400 focus:bg-white transition-all outline-none">
                             </div>
                             <div class="space-y-2">
-                                <label class="text-sm font-bold text-dark ml-2">Email Address</label>
-                                <input type="email" placeholder="john@example.com"
+                                <label class="text-sm font-bold text-dark ml-2">Email Address <span class="text-red-400">*</span></label>
+                                <input type="email" x-model="email" placeholder="john@example.com" required
                                     class="w-full px-6 py-4 rounded-2xl bg-secondary border-none focus:ring-2 focus:ring-primary-400 focus:bg-white transition-all outline-none">
                             </div>
                         </div>
                         <div class="space-y-2">
                             <label class="text-sm font-bold text-dark ml-2">Service Interested In</label>
-                            <select
+                            <select x-model="service"
                                 class="w-full px-6 py-4 rounded-2xl bg-secondary border-none focus:ring-2 focus:ring-primary-400 focus:bg-white transition-all outline-none appearance-none">
                                 <option>Sleep Training & Consulting</option>
                                 <option>Eating & Milestone Navigation</option>
@@ -245,13 +284,18 @@
                             </select>
                         </div>
                         <div class="space-y-2">
-                            <label class="text-sm font-bold text-dark ml-2">Message</label>
-                            <textarea rows="5" placeholder="Tell me about your child's age and current challenges..."
+                            <label class="text-sm font-bold text-dark ml-2">Message <span class="text-red-400">*</span></label>
+                            <textarea rows="5" x-model="message" placeholder="Tell me about your child's age and current challenges..." required
                                 class="w-full px-6 py-4 rounded-2xl bg-secondary border-none focus:ring-2 focus:ring-primary-400 focus:bg-white transition-all outline-none resize-none"></textarea>
                         </div>
-                        <button type="submit"
-                            class="w-full py-5 rounded-2xl bg-primary-600 text-white font-bold text-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-primary-600/20">Send
-                            Message</button>
+                        <button type="submit" :disabled="sending"
+                            :class="sending ? 'opacity-60 cursor-not-allowed' : 'hover:bg-primary-700 hover:shadow-primary-600/20'"
+                            class="w-full py-5 rounded-2xl bg-primary-600 text-white font-bold text-lg transition-all shadow-lg">
+                            <span x-show="!sending">Send Message</span>
+                            <span x-show="sending" class="flex items-center justify-center gap-3">
+                                <i class="fa-solid fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
                     </form>
                 </div>
 
@@ -282,6 +326,7 @@
                     <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
                     <li><a href="/about" class="hover:text-accent transition-colors">Meet Janita</a></li>
                     <li><a href="/services" class="hover:text-accent transition-colors">Services</a></li>
+                    <li><a href="/blog" class="hover:text-accent transition-colors">Blog</a></li>
                 </ul>
             </div>
             <div>

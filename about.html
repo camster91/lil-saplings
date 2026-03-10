@@ -24,8 +24,16 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="About Janita | Toronto Childcare Specialist | Lil Saplings">
     <meta name="twitter:description" content="Meet Janita, Toronto's Registered ECE and early childhood care specialist with 20+ years of experience.">
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>Ã°ÂÂÂ</text></svg>">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <!-- Google Analytics -->
+    <!-- Replace GA_MEASUREMENT_ID with your actual Google Analytics 4 measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -167,7 +175,7 @@
             <div class="flex flex-col lg:flex-row items-center gap-16 mb-24">
                 <div class="w-full lg:w-1/2">
                     <div class="rounded-[3rem] overflow-hidden shadow-soft aspect-[4/5]">
-                        <img src="./images/portrait.png" alt="Janita portrait" class="w-full h-full object-cover">
+                        <img src="./images/portrait.png" alt="Janita portrait" class="w-full h-full object-cover" loading="lazy">
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2">
@@ -247,6 +255,7 @@
                     <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
                     <li><a href="/about" class="hover:text-accent transition-colors">Meet Janita</a></li>
                     <li><a href="/services" class="hover:text-accent transition-colors">Services</a></li>
+                    <li><a href="/blog" class="hover:text-accent transition-colors">Blog</a></li>
                 </ul>
             </div>
             <div>

@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/camster91/lil-saplings#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "compression": "^1.8.0",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0"
   }
 }
