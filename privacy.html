@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Lil Saplings</title>
+    <meta name="description" content="Privacy policy for Lil Saplings childcare consulting. How we collect, use, and protect your personal information under Canadian privacy law (PIPEDA).">
+    <link rel="canonical" href="https://www.lilsaplings.ca/privacy">
+    <meta name="robots" content="noindex">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:url" content="https://www.lilsaplings.ca/privacy">
+    <meta property="og:title" content="Privacy Policy | Lil Saplings">
+    <meta property="og:site_name" content="Lil Saplings">
+    <meta property="og:image" content="https://www.lilsaplings.ca/images/hero.png">
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        primary: { 50: '#f4f7f4', 100: '#e5eee5', 200: '#cadedc', 300: '#a3c3a4', 400: '#76a178', 500: '#528354', 600: '#3e6740', 700: '#325234', 800: '#2b422d', 900: '#243725' },
+                        secondary: '#FAF9F6', accent: '#FCD34D', dark: '#1e293b'
+                    },
+                    borderRadius: { '4xl': '2rem', '5xl': '2.5rem', '6xl': '3rem' },
+                    boxShadow: { 'soft': '0 20px 40px -15px rgba(0,0,0,0.08)', 'softer': '0 10px 30px -10px rgba(0,0,0,0.05)' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FAF9F6; color: #1e293b; overflow-x: hidden; }
+        .hero-curve { position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: translateY(99%); z-index: 10; pointer-events: none; }
+        .hero-curve svg { display: block; width: calc(100% + 1.3px); height: 80px; }
+        @media (min-width: 768px) { .hero-curve svg { height: 160px; } }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+
+<body x-data="{ mobileMenuOpen: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 20)">
+
+    <!-- Navigation -->
+    <nav :class="scrolled ? 'bg-secondary/95 backdrop-blur-md shadow-sm text-dark py-4' : 'bg-transparent text-white py-6'"
+        class="fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold tracking-tight inline-flex items-center gap-2">
+                <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="/" class="hover:text-accent transition-colors">Home</a>
+                <a href="/about" class="hover:text-accent transition-colors">Meet Janita</a>
+                <a href="/services" class="hover:text-accent transition-colors">Services</a>
+                <a href="/packages" class="hover:text-accent transition-colors">Packages</a>
+                <a href="/contact"
+                    class="bg-white text-primary-600 px-6 py-2.5 rounded-full font-semibold hover:bg-accent hover:text-dark transition-all duration-300 shadow-softer flex items-center gap-2 group">
+                    Book a Consultation <span
+                        class="bg-primary-100 text-primary-600 rounded-full w-6 h-6 flex items-center justify-center text-xs group-hover:bg-primary-600 group-hover:text-white transition-colors"><i
+                            class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </div>
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-2xl focus:outline-none">
+                <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark text-dark' : 'fa-bars'"></i>
+            </button>
+        </div>
+        <div x-show="mobileMenuOpen" x-transition.opacity
+            class="absolute top-full left-0 w-full bg-secondary text-dark shadow-md md:hidden flex flex-col items-center py-6 space-y-4 font-medium border-t border-gray-100 z-50">
+            <a href="/" @click="mobileMenuOpen = false">Home</a>
+            <a href="/about" @click="mobileMenuOpen = false">Meet Janita</a>
+            <a href="/services" @click="mobileMenuOpen = false">Services</a>
+            <a href="/packages" @click="mobileMenuOpen = false">Packages</a>
+            <a href="/contact" @click="mobileMenuOpen = false" class="bg-primary-600 text-white px-8 py-3 rounded-full font-bold">Book a Consultation</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="bg-primary-600 pt-32 pb-24 md:pt-48 md:pb-40 px-6 relative">
+        <div class="max-w-7xl mx-auto text-center text-white relative z-20">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Privacy Policy</h1>
+            <p class="text-lg md:text-xl text-primary-50 max-w-2xl mx-auto font-light leading-relaxed">
+                How we collect, use, and protect your personal information.
+            </p>
+        </div>
+        <div class="hero-curve text-secondary">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="currentColor" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,197.3C672,192,768,160,864,154.7C960,149,1056,171,1152,186.7C1248,203,1344,213,1392,218.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="py-24 px-6 bg-secondary relative z-10">
+        <div class="max-w-3xl mx-auto">
+            <div class="bg-white rounded-[2.5rem] p-10 md:p-16 shadow-softer prose-lg">
+                <p class="text-sm text-gray-400 mb-8">Last updated: March 10, 2026</p>
+
+                <h2 class="text-2xl font-bold text-dark mb-4">1. Information We Collect</h2>
+                <p class="text-gray-600 font-light mb-6 leading-relaxed">When you use our contact form or book a consultation, we may collect your name, email address, phone number, and details about the services you're interested in. We also collect anonymous analytics data through Google Analytics to understand how visitors use our website.</p>
+
+                <h2 class="text-2xl font-bold text-dark mb-4">2. How We Use Your Information</h2>
+                <p class="text-gray-600 font-light mb-3 leading-relaxed">We use the information we collect to:</p>
+                <ul class="list-disc pl-6 text-gray-600 font-light mb-6 space-y-2">
+                    <li>Respond to your inquiries and consultation requests</li>
+                    <li>Provide childcare consulting services</li>
+                    <li>Send follow-up communications related to your consultation</li>
+                    <li>Improve our website and services</li>
+                </ul>
+                <p class="text-gray-600 font-light mb-6 leading-relaxed">We will never sell, rent, or share your personal information with third parties for marketing purposes.</p>
+
+                <h2 class="text-2xl font-bold text-dark mb-4">3. Cookies & Analytics</h2>
+                <p class="text-gray-600 font-light mb-6 leading-relaxed">We use Google Analytics to collect anonymous data about website usage, including pages visited, time spent, and referral sources. Google Analytics uses cookies to track this information. You can opt out of Google Analytics by using the <a href="https://tools.google.com/dlpage/gaoptout" class="text-primary-600 underline" target="_blank" rel="noopener">Google Analytics Opt-Out Browser Add-On</a>. We also store a cookie to remember your cookie consent preference.</p>
+
+                <h2 class="text-2xl font-bold text-dark mb-4">4. Data Storage & Security</h2>
+                <p class="text-gray-600 font-light mb-6 leading-relaxed">Contact form submissions are transmitted securely via our email provider (Mailgun). We do not store your form data in a database. Email correspondence is retained in our business email account and protected with industry-standard security measures.</p>
+
+                <h2 class="text-2xl font-bold text-dark mb-4">5. Your Rights Under PIPEDA</h2>
+                <p class="text-gray-600 font-light mb-6 leading-relaxed">Under Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), you have the right to:</p>
+                <ul class="list-disc pl-6 text-gray-600 font-light mb-6 space-y-2">
+                    <li>Know what personal information we hold about you</li>
+                    <li>Request correction of inaccurate information</li>
+                    <li>Request deletion of your personal information</li>
+                    <li>Withdraw consent for the collection or use of your data</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-dark mb-4">6. Third-Party Services</h2>
+                <p class="text-gray-600 font-light mb-6 leading-relaxed">We use the following third-party services that may process your data according to their own privacy policies:</p>
+                <ul class="list-disc pl-6 text-gray-600 font-light mb-6 space-y-2">
+                    <li><strong>Google Analytics</strong> — anonymous website usage tracking</li>
+                    <li><strong>Mailgun</strong> — email delivery for contact form submissions</li>
+                    <li><strong>Google Fonts</strong> — web font delivery</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-dark mb-4">7. Children's Privacy</h2>
+                <p class="text-gray-600 font-light mb-6 leading-relaxed">Our website is intended for parents and guardians. We do not knowingly collect personal information from children under 13. If you believe your child has provided us with personal information, please contact us and we will promptly delete it.</p>
+
+                <h2 class="text-2xl font-bold text-dark mb-4">8. Contact Us</h2>
+                <p class="text-gray-600 font-light mb-6 leading-relaxed">If you have questions about this privacy policy or wish to exercise your rights, please contact us at:</p>
+                <div class="bg-primary-50 p-6 rounded-2xl">
+                    <p class="text-primary-800 font-medium">Lil Saplings Consulting</p>
+                    <p class="text-primary-700 text-sm">Email: lilsaplingschildcare@gmail.com</p>
+                    <p class="text-primary-700 text-sm">Phone: (647) 402-5890</p>
+                    <p class="text-primary-700 text-sm">Toronto, ON, Canada</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 pt-20 pb-10 px-6">
+        <div class="max-w-7xl mx-auto border-b border-primary-800 pb-16 mb-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <a href="/" class="text-3xl font-bold text-white mb-6 inline-flex items-center gap-2">
+                    <i class="fa-solid fa-leaf text-accent"></i> Lil Saplings
+                </a>
+                <p class="text-primary-200 font-light max-w-sm mb-8">Experienced early childhood care and consulting providing peace of mind for modern families.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-primary-800 text-white flex items-center justify-center hover:bg-accent transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-primary-800 text-white flex items-center justify-center hover:bg-accent transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Explore</h4>
+                <ul class="space-y-4 text-primary-200">
+                    <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
+                    <li><a href="/about" class="hover:text-accent transition-colors">Meet Janita</a></li>
+                    <li><a href="/services" class="hover:text-accent transition-colors">Services</a></li>
+                    <li><a href="/blog" class="hover:text-accent transition-colors">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Support</h4>
+                <ul class="space-y-4 text-primary-200">
+                    <li><a href="/packages" class="hover:text-accent transition-colors">Pricing</a></li>
+                    <li><a href="/contact" class="hover:text-accent transition-colors">Contact</a></li>
+                    <li><a href="/faq" class="hover:text-accent transition-colors">FAQ</a></li>
+                    <li><a href="/privacy" class="hover:text-accent transition-colors">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Contact</h4>
+                <ul class="space-y-4 text-primary-200 text-sm">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-accent"></i> Toronto, ON, Canada</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-accent"></i> (647) 402-5890</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-accent"></i> lilsaplingschildcare@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex justify-center opacity-80 select-none pointer-events-none mb-4">
+            <h1 class="text-[15vw] md:text-[12vw] font-black text-transparent bg-clip-text bg-gradient-to-b from-primary-800 to-primary-900 tracking-tighter leading-none transform scale-y-75">Lil Saplings</h1>
+        </div>
+        <div class="text-center text-primary-400 text-sm font-light">
+            &copy; 2026 Lil Saplings Consulting. All rights reserved.
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ duration: 700, once: true, offset: 80 });</script>
+
+    <!-- WhatsApp / Text Button -->
+    <a href="https://wa.me/16474025890?text=Hi%20Janita%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20services."
+        target="_blank" rel="noopener"
+        class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all hover:scale-110"
+        aria-label="Message us on WhatsApp">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Cookie Consent Banner -->
+    <div x-data="{ show: !localStorage.getItem('cookie_consent') }" x-show="show" x-transition
+        class="fixed bottom-0 left-0 right-0 z-[60] bg-white border-t border-gray-200 shadow-lg px-6 py-4 md:py-3">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-gray-600 font-light text-center md:text-left">We use cookies and Google Analytics to improve your experience. By continuing to use this site, you consent to our <a href="/privacy" class="text-primary-600 underline">Privacy Policy</a>.</p>
+            <div class="flex gap-3 shrink-0">
+                <button @click="localStorage.setItem('cookie_consent', 'accepted'); show = false"
+                    class="px-6 py-2 rounded-full bg-primary-600 text-white text-sm font-bold hover:bg-primary-700 transition-colors">Accept</button>
+                <button @click="localStorage.setItem('cookie_consent', 'declined'); show = false"
+                    class="px-6 py-2 rounded-full bg-gray-100 text-gray-600 text-sm font-medium hover:bg-gray-200 transition-colors">Decline</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

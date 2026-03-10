@@ -20,6 +20,8 @@
     <meta property="og:title" content="Lil Saplings | Newborn Care & Sleep Consultant in Toronto, ON">
     <meta property="og:description" content="Toronto's trusted early childhood care specialist. Newborn care, baby sleep training, and milestone coaching for families in Toronto, ON. 20+ years experience.">
     <meta property="og:site_name" content="Lil Saplings">
+    <meta property="og:image" content="https://www.lilsaplings.ca/images/hero.png">
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Lil Saplings | Newborn Care & Sleep Consultant in Toronto, ON">
@@ -89,7 +91,14 @@
       "serviceType": ["Newborn Care", "Sleep Training", "Child Milestone Coaching", "Postpartum Support"],
       "knowsAbout": ["Baby Sleep Training", "Newborn Care", "Early Childhood Development", "Postpartum Support"],
       "openingHours": "Mo-Fr 09:00-18:00",
-      "priceRange": "$$"
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "20",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
     }
     </script>
     <style>
@@ -136,6 +145,7 @@
             box-shadow: 0 25px 50px -12px rgba(62, 103, 64, 0.15);
         }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 
 <body x-data="{ mobileMenuOpen: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 20)">
@@ -180,10 +190,10 @@
             <div class="w-full lg:w-1/2 text-white mb-16 lg:mb-0 lg:pr-12 text-center lg:text-left">
                 <div
                     class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/10 text-white/90 text-xs font-bold tracking-wider uppercase mb-6 backdrop-blur-sm border border-white/20">
-                    Lil Saplings Ã¢ÂÂ¢ Experienced Care</div>
+                    Lil Saplings • Experienced Care</div>
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] tracking-tight">Experienced Guidance for Your Journey.</h1>
                 <p class="text-lg md:text-xl text-primary-50 mb-10 max-w-lg mx-auto lg:mx-0 font-light">I provide
-                    personalized, specialized support navigating childhood's early stagesâfrom sleep coaching and establishing daily routines, to dedicated assistance for busy parents.</p>
+                    personalized, specialized support navigating childhood's early stages—from sleep coaching and establishing daily routines, to dedicated assistance for busy parents.</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
                     <a href="/contact"
                         class="px-8 py-4 rounded-full bg-white text-primary-600 font-bold text-lg hover:bg-accent hover:text-dark transition-all shadow-lg flex items-center justify-center gap-3 w-full sm:w-auto">
@@ -235,7 +245,7 @@
             <h2 class="text-4xl md:text-5xl font-bold text-primary-700 mb-16 tracking-tight">Your Partner in Development
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="bg-white p-10 rounded-[2rem] shadow-softer hover-card">
+                <div class="bg-white p-10 rounded-[2rem] shadow-softer hover-card" data-aos="fade-up">
                     <div
                         class="w-20 h-20 rounded-full bg-primary-50 text-primary-600 flex items-center justify-center text-3xl mb-6 mx-auto">
                         <i class="fa-solid fa-graduation-cap"></i>
@@ -243,7 +253,7 @@
                     <h3 class="text-2xl font-bold mb-4 text-dark">Knowledge and Experience</h3>
                     <p class="text-gray-600 font-light">Experienced newborn care specialist with over 20 years of hands-on experience solving family roadblocks.</p>
                 </div>
-                <div class="bg-white p-10 rounded-[2rem] shadow-softer hover-card">
+                <div class="bg-white p-10 rounded-[2rem] shadow-softer hover-card" data-aos="fade-up">
                     <div
                         class="w-20 h-20 rounded-full bg-primary-50 text-primary-600 flex items-center justify-center text-3xl mb-6 mx-auto">
                         <i class="fa-solid fa-heart-pulse"></i>
@@ -252,13 +262,13 @@
                     <p class="text-gray-600 font-light">I look beyond the surface to help with the root causes, providing
                         sustainable solutions for your household's rhythm.</p>
                 </div>
-                <div class="bg-white p-10 rounded-[2rem] shadow-softer hover-card">
+                <div class="bg-white p-10 rounded-[2rem] shadow-softer hover-card" data-aos="fade-up">
                     <div
                         class="w-20 h-20 rounded-full bg-primary-50 text-primary-600 flex items-center justify-center text-3xl mb-6 mx-auto">
                         <i class="fa-solid fa-clock"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-dark">Tailored Support</h3>
-                    <p class="text-gray-600 font-light">Completely personalized careÃ¢ÂÂfrom 1-hour virtual deep dives to
+                    <p class="text-gray-600 font-light">Completely personalized care—from 1-hour virtual deep dives to
                         full in-home overnight stays.</p>
                 </div>
             </div>
@@ -276,7 +286,7 @@
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
             <div class="w-full lg:w-1/2 relative">
                 <div
-                    class="relative rounded-[3rem] overflow-hidden shadow-soft aspect-[4/3] transform hover:scale-[1.02] transition-transform duration-500">
+                    class="relative rounded-[3rem] overflow-hidden shadow-soft aspect-[4/3] transform hover:scale-[1.02] transition-transform duration-500" data-aos="fade-right">
                     <img src="./images/portrait.png" alt="Janita portrait" class="w-full h-full object-cover" loading="lazy">
                 </div>
             </div>
@@ -358,7 +368,7 @@
                 <h2 class="text-4xl md:text-5xl font-bold text-dark tracking-tight">Trusted by Toronto Families</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-secondary p-10 rounded-[2rem] shadow-softer">
+                <div class="bg-secondary p-10 rounded-[2rem] shadow-softer" data-aos="fade-up">
                     <div class="flex items-center gap-1 text-accent mb-6">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -375,7 +385,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-secondary p-10 rounded-[2rem] shadow-softer">
+                <div class="bg-secondary p-10 rounded-[2rem] shadow-softer" data-aos="fade-up">
                     <div class="flex items-center gap-1 text-accent mb-6">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -392,7 +402,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-secondary p-10 rounded-[2rem] shadow-softer">
+                <div class="bg-secondary p-10 rounded-[2rem] shadow-softer" data-aos="fade-up">
                     <div class="flex items-center gap-1 text-accent mb-6">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -421,17 +431,17 @@
                 From the Blog</div>
             <h2 class="text-4xl md:text-5xl font-bold text-dark tracking-tight mb-12">Tips & Insights</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mb-12">
-                <a href="/blog" class="bg-white rounded-[2rem] p-8 shadow-softer hover:shadow-soft transition-shadow group">
+                <a href="/blog" class="bg-white rounded-[2rem] p-8 shadow-softer hover:shadow-soft transition-shadow group" data-aos="fade-up">
                     <span class="px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-bold uppercase tracking-wider">Sleep</span>
                     <h3 class="text-xl font-bold text-dark mt-4 mb-3 group-hover:text-primary-600 transition-colors">5 Gentle Sleep Training Tips Every Toronto Parent Should Know</h3>
                     <p class="text-gray-500 font-light text-sm">Evidence-based methods to help your baby sleep through the night without the stress.</p>
                 </a>
-                <a href="/blog" class="bg-white rounded-[2rem] p-8 shadow-softer hover:shadow-soft transition-shadow group">
+                <a href="/blog" class="bg-white rounded-[2rem] p-8 shadow-softer hover:shadow-soft transition-shadow group" data-aos="fade-up">
                     <span class="px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-bold uppercase tracking-wider">Newborn</span>
                     <h3 class="text-xl font-bold text-dark mt-4 mb-3 group-hover:text-primary-600 transition-colors">The First 30 Days: A Survival Guide for New Parents</h3>
                     <p class="text-gray-500 font-light text-sm">Everything I wish new parents knew about navigating those first magical weeks.</p>
                 </a>
-                <a href="/blog" class="bg-white rounded-[2rem] p-8 shadow-softer hover:shadow-soft transition-shadow group">
+                <a href="/blog" class="bg-white rounded-[2rem] p-8 shadow-softer hover:shadow-soft transition-shadow group" data-aos="fade-up">
                     <span class="px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-bold uppercase tracking-wider">Nutrition</span>
                     <h3 class="text-xl font-bold text-dark mt-4 mb-3 group-hover:text-primary-600 transition-colors">Dealing with Picky Eaters: What Actually Works</h3>
                     <p class="text-gray-500 font-light text-sm">Proven strategies to turn mealtime battles into peaceful family moments.</p>
@@ -472,13 +482,15 @@
                 <ul class="space-y-4 text-primary-200">
                     <li><a href="/packages" class="hover:text-accent transition-colors">Pricing</a></li>
                     <li><a href="/contact" class="hover:text-accent transition-colors">Contact</a></li>
+                    <li><a href="/faq" class="hover:text-accent transition-colors">FAQ</a></li>
+                    <li><a href="/privacy" class="hover:text-accent transition-colors">Privacy Policy</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6">Contact</h4>
                 <ul class="space-y-4 text-primary-200 text-sm">
                     <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-accent"></i>
-                        Toronto, ON, Ca</li>
+                        Toronto, ON, Canada</li>
                     <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-accent"></i> (647) 402-5890
                     </li>
                     <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-accent"></i>
@@ -495,6 +507,30 @@
             &copy; 2026 Lil Saplings Consulting. All rights reserved.
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ duration: 700, once: true, offset: 80 });</script>
+
+    <!-- WhatsApp / Text Button -->
+    <a href="https://wa.me/16474025890?text=Hi%20Janita%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20services."
+        target="_blank" rel="noopener"
+        class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all hover:scale-110"
+        aria-label="Message us on WhatsApp">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Cookie Consent Banner -->
+    <div x-data="{ show: !localStorage.getItem('cookie_consent') }" x-show="show" x-transition
+        class="fixed bottom-0 left-0 right-0 z-[60] bg-white border-t border-gray-200 shadow-lg px-6 py-4 md:py-3">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-gray-600 font-light text-center md:text-left">We use cookies and Google Analytics to improve your experience. By continuing to use this site, you consent to our <a href="/privacy" class="text-primary-600 underline">Privacy Policy</a>.</p>
+            <div class="flex gap-3 shrink-0">
+                <button @click="localStorage.setItem('cookie_consent', 'accepted'); show = false"
+                    class="px-6 py-2 rounded-full bg-primary-600 text-white text-sm font-bold hover:bg-primary-700 transition-colors">Accept</button>
+                <button @click="localStorage.setItem('cookie_consent', 'declined'); show = false"
+                    class="px-6 py-2 rounded-full bg-gray-100 text-gray-600 text-sm font-medium hover:bg-gray-200 transition-colors">Decline</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

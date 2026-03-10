@@ -20,6 +20,8 @@
     <meta property="og:title" content="Services | Baby Sleep Training & Childcare Consulting in Toronto | Lil Saplings">
     <meta property="og:description" content="Toronto childcare services by Janita: baby sleep training, eating & milestone coaching, and hands-on newborn care. In-home & virtual options for Toronto families.">
     <meta property="og:site_name" content="Lil Saplings">
+    <meta property="og:image" content="https://www.lilsaplings.ca/images/hero.png">
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Services | Baby Sleep Training & Childcare in Toronto | Lil Saplings">
@@ -122,6 +124,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 
 <body x-data="{ mobileMenuOpen: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 20)">
@@ -292,13 +295,15 @@
                 <ul class="space-y-4 text-primary-200">
                     <li><a href="/packages" class="hover:text-accent transition-colors">Pricing</a></li>
                     <li><a href="/contact" class="hover:text-accent transition-colors">Contact</a></li>
+                    <li><a href="/faq" class="hover:text-accent transition-colors">FAQ</a></li>
+                    <li><a href="/privacy" class="hover:text-accent transition-colors">Privacy Policy</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white font-bold mb-6">Contact</h4>
                 <ul class="space-y-4 text-primary-200 text-sm">
                     <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-accent"></i>
-                        Toronto, ON, Ca</li>
+                        Toronto, ON, Canada</li>
                     <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-accent"></i> (647) 402-5890
                     </li>
                     <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-accent"></i>
@@ -315,6 +320,30 @@
             &copy; 2026 Lil Saplings Consulting. All rights reserved.
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ duration: 700, once: true, offset: 80 });</script>
+
+    <!-- WhatsApp / Text Button -->
+    <a href="https://wa.me/16474025890?text=Hi%20Janita%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20services."
+        target="_blank" rel="noopener"
+        class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all hover:scale-110"
+        aria-label="Message us on WhatsApp">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Cookie Consent Banner -->
+    <div x-data="{ show: !localStorage.getItem('cookie_consent') }" x-show="show" x-transition
+        class="fixed bottom-0 left-0 right-0 z-[60] bg-white border-t border-gray-200 shadow-lg px-6 py-4 md:py-3">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-gray-600 font-light text-center md:text-left">We use cookies and Google Analytics to improve your experience. By continuing to use this site, you consent to our <a href="/privacy" class="text-primary-600 underline">Privacy Policy</a>.</p>
+            <div class="flex gap-3 shrink-0">
+                <button @click="localStorage.setItem('cookie_consent', 'accepted'); show = false"
+                    class="px-6 py-2 rounded-full bg-primary-600 text-white text-sm font-bold hover:bg-primary-700 transition-colors">Accept</button>
+                <button @click="localStorage.setItem('cookie_consent', 'declined'); show = false"
+                    class="px-6 py-2 rounded-full bg-gray-100 text-gray-600 text-sm font-medium hover:bg-gray-200 transition-colors">Decline</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

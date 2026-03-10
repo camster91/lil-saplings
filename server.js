@@ -12,8 +12,8 @@ app.use(helmet({
     contentSecurityPolicy: {
         directives: {
             defaultSrc: ["'self'"],
-            scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://cdn.tailwindcss.com", "https://cdn.jsdelivr.net"],
-            styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com", "https://cdnjs.cloudflare.com"],
+            scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://cdn.tailwindcss.com", "https://cdn.jsdelivr.net", "https://www.googletagmanager.com", "https://unpkg.com"],
+            styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com", "https://cdnjs.cloudflare.com", "https://unpkg.com"],
             fontSrc: ["'self'", "https://fonts.gstatic.com", "https://cdnjs.cloudflare.com"],
             imgSrc: ["'self'", "data:", "https:"],
             connectSrc: ["'self'", "https://www.google-analytics.com"],
@@ -55,7 +55,7 @@ app.get('/sitemap.xml', (req, res) => {
 });
 
 // Clean URL routes
-const pages = ['about', 'services', 'packages', 'contact', 'blog'];
+const pages = ['about', 'services', 'packages', 'contact', 'blog', 'faq', 'privacy', 'areas'];
 pages.forEach(page => {
     app.get(`/${page}`, (req, res) => {
         res.sendFile(path.join(__dirname, `${page}.html`));
@@ -71,12 +71,57 @@ app.get(/\.html$/, (req, res) => {
     res.redirect(301, clean);
 });
 
+// ── Rate limiting for contact form (in-memory) ──
+const contactRateLimit = new Map();
+const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
+const RATE_LIMIT_MAX = 3; // max 3 requests per minute per IP
+
+function checkRateLimit(ip) {
+    const now = Date.now();
+    const entry = contactRateLimit.get(ip);
+    if (!entry || now - entry.firstRequest > RATE_LIMIT_WINDOW) {
+        contactRateLimit.set(ip, { firstRequest: now, count: 1 });
+        return true;
+    }
+    if (entry.count >= RATE_LIMIT_MAX) {
+        return false;
+    }
+    entry.count++;
+    return true;
+}
+
+// Clean up rate limit map periodically
+setInterval(() => {
+    const now = Date.now();
+    for (const [ip, entry] of contactRateLimit) {
+        if (now - entry.firstRequest > RATE_LIMIT_WINDOW) {
+            contactRateLimit.delete(ip);
+        }
+    }
+}, 60 * 1000);
+
 // ── Mailgun contact form API ──
 app.post('/api/contact', async (req, res) => {
-    const { name, email, service, message } = req.body;
+    const { name, email, service, message, website } = req.body;
+
+    // Honeypot — if filled, it's a bot. Silently accept to not tip off bots.
+    if (website) {
+        return res.json({ success: true, message: 'Your message has been sent! I\'ll get back to you within 24 hours.' });
+    }
+
+    // Rate limiting
+    const clientIp = req.ip || req.headers['x-forwarded-for'] || 'unknown';
+    if (!checkRateLimit(clientIp)) {
+        return res.status(429).json({ error: 'Too many requests. Please wait a minute and try again.' });
+    }
 
     if (!name || !email || !message) {
         return res.status(400).json({ error: 'Name, email, and message are required.' });
+    }
+
+    // Basic email validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        return res.status(400).json({ error: 'Please provide a valid email address.' });
     }
 
     const MAILGUN_API_KEY = process.env.MAILGUN_API_KEY;
