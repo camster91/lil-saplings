@@ -24,8 +24,16 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Services | Baby Sleep Training & Childcare in Toronto | Lil Saplings">
     <meta name="twitter:description" content="Toronto childcare services: baby sleep training, eating & milestone coaching, and hands-on newborn care.">
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>ð</text></svg>">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <!-- Google Analytics -->
+    <!-- Replace GA_MEASUREMENT_ID with your actual Google Analytics 4 measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -184,7 +192,7 @@
                     <h2 class="text-2xl font-bold text-dark mb-4">Sleep Training & Consulting</h2>
                     <div class="mb-6 rounded-2xl overflow-hidden aspect-video">
                         <img src="./images/consultation.png" alt="Janita providing consultation"
-                            class="w-full h-full object-cover">
+                            class="w-full h-full object-cover" loading="lazy">
                     </div>
                     <p class="text-gray-600 mb-8 font-light leading-relaxed">conquer the nights once and for all. I
                         specialize in gentle, evidence-based methods that teach your little one the skill of sleep
@@ -234,7 +242,7 @@
                     <h2 class="text-2xl font-bold text-dark mb-4">Hands-On Care & Coaching</h2>
                     <div class="mb-6 rounded-2xl overflow-hidden aspect-video">
                         <img src="./images/playing.png" alt="Janita playing with a child"
-                            class="w-full h-full object-cover">
+                            class="w-full h-full object-cover" loading="lazy">
                     </div>
                     <p class="text-gray-600 mb-8 font-light leading-relaxed">Direct, expert support when you need it
                         most. I provide specialized care shifts coupled with live coaching to help you master new
@@ -280,6 +288,7 @@
                     <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
                     <li><a href="/about" class="hover:text-accent transition-colors">Meet Janita</a></li>
                     <li><a href="/services" class="hover:text-accent transition-colors">Services</a></li>
+                    <li><a href="/blog" class="hover:text-accent transition-colors">Blog</a></li>
                 </ul>
             </div>
             <div>

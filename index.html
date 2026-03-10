@@ -24,8 +24,16 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Lil Saplings | Newborn Care & Sleep Consultant in Toronto, ON">
     <meta name="twitter:description" content="Toronto's trusted early childhood care specialist. Newborn care, baby sleep training, and milestone coaching for families in Toronto, ON.">
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>Ã°ÂÂÂ</text></svg>">
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <!-- Google Analytics -->
+    <!-- Replace GA_MEASUREMENT_ID with your actual Google Analytics 4 measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -202,7 +210,7 @@
                 <div
                     class="relative w-full aspect-[4/5] md:aspect-square max-w-lg mx-auto transform hover:scale-[1.02] transition-transform duration-500">
                     <img src="./images/hero.png" alt="Janita playing with a toddler"
-                        class="w-full h-full object-cover rounded-[3rem] shadow-2xl z-10 relative">
+                        class="w-full h-full object-cover rounded-[3rem] shadow-2xl z-10 relative" loading="lazy">
                     <div
                         class="absolute -top-6 -right-6 w-full h-full border-4 border-accent rounded-[3rem] z-0 opacity-50">
                     </div>
@@ -269,7 +277,7 @@
             <div class="w-full lg:w-1/2 relative">
                 <div
                     class="relative rounded-[3rem] overflow-hidden shadow-soft aspect-[4/3] transform hover:scale-[1.02] transition-transform duration-500">
-                    <img src="./images/portrait.png" alt="Janita portrait" class="w-full h-full object-cover">
+                    <img src="./images/portrait.png" alt="Janita portrait" class="w-full h-full object-cover" loading="lazy">
                 </div>
             </div>
             <div class="w-full lg:w-1/2">
@@ -340,6 +348,99 @@
         </div>
     </section>
 
+    <!-- Testimonials -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div
+                    class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-xs font-bold uppercase mb-4 tracking-wider">
+                    What Parents Say</div>
+                <h2 class="text-4xl md:text-5xl font-bold text-dark tracking-tight">Trusted by Toronto Families</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-secondary p-10 rounded-[2rem] shadow-softer">
+                    <div class="flex items-center gap-1 text-accent mb-6">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 font-light mb-8 leading-relaxed">"Janita completely transformed our nights. Our 8-month-old went from waking 5 times a night to sleeping through in just 6 days. Her approach was gentle and we felt supported every step of the way."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center font-bold">S</div>
+                        <div>
+                            <p class="font-bold text-dark text-sm">Sarah M.</p>
+                            <p class="text-gray-400 text-xs">Toronto, ON</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-secondary p-10 rounded-[2rem] shadow-softer">
+                    <div class="flex items-center gap-1 text-accent mb-6">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 font-light mb-8 leading-relaxed">"As first-time parents, we were lost. Janita came to our home and within hours we felt like we had a real game plan. She's warm, practical, and genuinely cares about families."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center font-bold">R</div>
+                        <div>
+                            <p class="font-bold text-dark text-sm">Ryan & Priya K.</p>
+                            <p class="text-gray-400 text-xs">North York, ON</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-secondary p-10 rounded-[2rem] shadow-softer">
+                    <div class="flex items-center gap-1 text-accent mb-6">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 font-light mb-8 leading-relaxed">"My toddler refused to eat anything green. After working with Janita's eating plan, he now happily eats broccoli and peas. I couldn't believe the change in just two weeks."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center font-bold">L</div>
+                        <div>
+                            <p class="font-bold text-dark text-sm">Lisa T.</p>
+                            <p class="text-gray-400 text-xs">Scarborough, ON</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Teaser -->
+    <section class="py-24 px-6 bg-secondary">
+        <div class="max-w-7xl mx-auto text-center">
+            <div
+                class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-xs font-bold uppercase mb-4 tracking-wider">
+                From the Blog</div>
+            <h2 class="text-4xl md:text-5xl font-bold text-dark tracking-tight mb-12">Tips & Insights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mb-12">
+                <a href="/blog" class="bg-white rounded-[2rem] p-8 shadow-softer hover:shadow-soft transition-shadow group">
+                    <span class="px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-bold uppercase tracking-wider">Sleep</span>
+                    <h3 class="text-xl font-bold text-dark mt-4 mb-3 group-hover:text-primary-600 transition-colors">5 Gentle Sleep Training Tips Every Toronto Parent Should Know</h3>
+                    <p class="text-gray-500 font-light text-sm">Evidence-based methods to help your baby sleep through the night without the stress.</p>
+                </a>
+                <a href="/blog" class="bg-white rounded-[2rem] p-8 shadow-softer hover:shadow-soft transition-shadow group">
+                    <span class="px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-bold uppercase tracking-wider">Newborn</span>
+                    <h3 class="text-xl font-bold text-dark mt-4 mb-3 group-hover:text-primary-600 transition-colors">The First 30 Days: A Survival Guide for New Parents</h3>
+                    <p class="text-gray-500 font-light text-sm">Everything I wish new parents knew about navigating those first magical weeks.</p>
+                </a>
+                <a href="/blog" class="bg-white rounded-[2rem] p-8 shadow-softer hover:shadow-soft transition-shadow group">
+                    <span class="px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-bold uppercase tracking-wider">Nutrition</span>
+                    <h3 class="text-xl font-bold text-dark mt-4 mb-3 group-hover:text-primary-600 transition-colors">Dealing with Picky Eaters: What Actually Works</h3>
+                    <p class="text-gray-500 font-light text-sm">Proven strategies to turn mealtime battles into peaceful family moments.</p>
+                </a>
+            </div>
+            <a href="/blog" class="inline-flex items-center px-8 py-4 rounded-full bg-primary-600 text-white font-bold text-lg hover:bg-primary-700 transition-all shadow-lg">Read All Articles</a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-primary-900 pt-20 pb-10 px-6">
         <div class="max-w-7xl mx-auto border-b border-primary-800 pb-16 mb-8 grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -363,6 +464,7 @@
                     <li><a href="/" class="hover:text-accent transition-colors">Home</a></li>
                     <li><a href="/about" class="hover:text-accent transition-colors">Meet Janita</a></li>
                     <li><a href="/services" class="hover:text-accent transition-colors">Services</a></li>
+                    <li><a href="/blog" class="hover:text-accent transition-colors">Blog</a></li>
                 </ul>
             </div>
             <div>
